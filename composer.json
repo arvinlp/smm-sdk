@@ -13,7 +13,7 @@
     }],
     "require": {
         "ext-curl": "*",
-        "laravel/framework": "5.*.*"
+        "laravel/framework": "*"
     },
     "autoload": {
         "psr-4": {
