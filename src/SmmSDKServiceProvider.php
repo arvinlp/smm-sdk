@@ -4,8 +4,8 @@
  * @Date: 2022-03-28 17:44:38 
  * Copyright by Arvin Loripour 
  * WebSite : http://www.arvinlp.ir 
- * @Last Modified by:   Arvin.Loripour 
- * @Last Modified time: 2022-03-28 17:44:38 
+ * @Last Modified by: Arvin.Loripour
+ * @Last Modified time: 2022-03-28 17:50:53
  */
 
 namespace Arvinlp\SmmSDK;
@@ -28,14 +28,14 @@ class SmmSDKServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes(
-            [__DIR__.'/config/smm_api.php' => config_path('smm_api.php')], 'config'
+            [__DIR__.'/config/smm_sdk.php' => config_path('smm_sdk.php')], 'config'
         );
     }
 
     public function register()
     {
         $this->app->singleton(ISmmSDK::class, function ($app) {
-            return new SmmSDK(config('smm_api.key'),config('smm_api.url'));
+            return new SmmSDK(config('smm_sdk.key'),config('smm_sdk.url'));
         });
     }
 }
