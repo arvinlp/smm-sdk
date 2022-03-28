@@ -1,0 +1,30 @@
+{
+    "name": "arvinlp/smm-sdk",
+    "keywords": [
+        "laravel",
+        "smm"
+    ],
+    "license": "MIT",
+    "version": "0.1",
+    "minimum-stability": "stable",
+    "authors": [{
+        "name": "Arvin Loripour",
+        "email": "info@arvinlp.ir"
+    }],
+    "require": {
+        "ext-curl": "*",
+        "laravel/framework": "5.*.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Arvinlp\\SmmSDK\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Arvinlp\\SmmSDK\\SmmSDKServiceProvider"
+            ]
+        }
+    }
+}
